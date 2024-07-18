@@ -1,0 +1,32 @@
+#include<iostream>                               // Header File
+using  namespace std;
+
+int MinimumNumber(int , int);                    // Function Declaration or Function Prototype
+
+int MinimumNumber(int arr[],int size)            // Function Definition
+{  // Minimum value 
+	int ans=INT_MAX;               
+	for(int i=0;i<6;i++)
+	{
+		if(arr[i]<ans)
+		{
+			ans=arr[i];
+		}
+	
+}
+return ans;                                     // Return Stament 
+}
+int main()                                        // Main Function
+{
+	int arr[6];
+
+	for(int i=0;i<6;i++)
+	{
+	cin>>arr[i];
+
+	}
+int size=sizeof(arr)/sizeof(arr[0]);             // Size of the Array 
+
+cout<<MinimumNumber(arr,size);                     // Function Calling 
+	return 0;
+}
