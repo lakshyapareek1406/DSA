@@ -1,0 +1,30 @@
+#include<iostream>                    // Header File
+using namespace std;
+int MaximumNumber(int a[] ,int n)   // Function Definition
+{
+	int ans=INT_MIN;
+	for(int i=0;i<6;i++)
+	{
+		if(a[i]>ans)
+		{
+			ans=a[i];
+		}
+	}
+	return ans;                     // Return Statement 
+}
+
+
+
+
+int main()                          // Main Function :- Entry Point of The Program
+{
+  	int arr[6];
+  	cout << "Enter 6 elements: ";                              // Input The Array 
+  	for(int i=0;i<6;i++)
+  	{
+  		cin>>arr[i];
+	}
+	int size=sizeof(arr)/sizeof(arr[0]);              // Size of The  Array
+	
+	cout<<"Maximum Number in The Given Array is:"<<MaximumNumber(arr,size);                      //Function Call
+}
