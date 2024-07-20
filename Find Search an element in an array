@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>             // Header File 
+using namespace std;
+
+int search(int arr[], int N, int X)    // Function Definition..
+{
+  for(int i=0;i<N;i++)
+  {
+      if(arr[i]==X)
+      return i;
+  }
+  return -1;
+        
+}
+int main()                      //  Main Function
+{
+	int arr[5];
+	cout<<"Enter the 5 Elements:"; 
+	for(int i=0;i<5;i++)
+	{
+		cin>>arr[i];
+	}
+	int N=sizeof(arr)/sizeof(arr[0]);                    // Size of The Array..
+	
+  int x;
+  cout<<"Enter the Search Element:";
+  cin>>x;
+    
+  cout<<"Index Number for Search Element is:"<<search(arr,N,x);              //Function Call..
+	 
+ }
