@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>                                     // Header File
+using namespace std;                                             
+
+void  ReverseArray(int arr[],int start, int end,int n)                          // Function Definition
+{
+	while(start<end)
+	{
+		swap(arr[start],arr[end]);        // Reverse Array in this logic 
+		start++;
+		end--;
+	}
+	for(int i=0;i<n;i++)
+	cout<<arr[i]<<" ";
+}
+
+int main()                                     // Main Function
+{
+	int arr[6];
+	cout<<"Enter the 6 Elements";
+	for(int i=0;i<sizeof(arr)/sizeof(arr[0]);i++)
+	{
+		cin>>arr[i];
+	}
+	int n=sizeof(arr)/sizeof(arr[0]);                   // Size of the Array
+	int start=0, end=n-1;
+	
+	ReverseArray(arr,start,end,n);                        // Function Call
+	
+}
