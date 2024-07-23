@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int findMissing(int arr[], int n)
+{
+	double  actual_sum=((n+1)*(arr[0] + arr[n-1]))/2.0;
+	
+	double  current_sum= 0;
+	
+	for(int i=0;i<n;i++)
+	{
+		current_sum=current_sum+arr[i];
+	}
+	double  missing= actual_sum - current_sum;
+	return missing;
+}
+
+
+int  main()
+{
+	int arr[6];
+	cout<<"Enter the 6th Elements:";
+	for(int i=0;i<sizeof(arr)/sizeof(arr[0]);i++)
+	{
+		cin>>arr[i];
+	}
+	int n=sizeof(arr)/sizeof(arr[0]);
+	
+	cout<<findMissing(arr,n);
+	
+}
