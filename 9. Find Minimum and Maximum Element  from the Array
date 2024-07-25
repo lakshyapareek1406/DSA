@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+pair<int, int> MinMax(int arr[], int n) {
+    int minVal = arr[0];
+    int maxVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maxVal)
+            maxVal = arr[i];
+        if (arr[i] < minVal)
+            minVal = arr[i];
+    }
+    return make_pair(minVal, maxVal);
+}
+
+int main() {
+    int arr[9];
+    cout << "Enter 9 elements: ";
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        cin >> arr[i];
+    }
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    pair<int, int> result = MinMax(arr, n);
+
+    cout << "Minimum element: " << result.first << endl;
+    cout << "Maximum element: " << result.second << endl;
+
+    return 0;
+}
